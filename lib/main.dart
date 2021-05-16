@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-void main() => BMICalculator();
+void main() => runApp(BMICalculator());
 
 class BMICalculator extends StatelessWidget {
   @override
