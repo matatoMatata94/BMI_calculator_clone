@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 
 import 'colors_theme.dart';
 
+final cardColor = blueBMIColors[1].toColor();
+final bottomBarColor = greenBMIColors[0].toColor();
+final bottomBarHeight = 80;
+
 class InputPage extends StatefulWidget {
   @override
   _InputPageState createState() => _InputPageState();
@@ -21,12 +25,12 @@ class _InputPageState extends State<InputPage> {
               children: [
                 Expanded(
                   child: ReusableCard(
-                    cardColor: blueBMIColors[1].toColor(),
+                    cardColor: cardColor,
                   ),
                 ),
                 Expanded(
                   child: ReusableCard(
-                    cardColor: blueBMIColors[1].toColor(),
+                    cardColor: cardColor,
                   ),
                 ),
               ],
@@ -34,7 +38,7 @@ class _InputPageState extends State<InputPage> {
           ),
           Expanded(
             child: ReusableCard(
-              cardColor: blueBMIColors[1].toColor(),
+              cardColor: cardColor,
             ),
           ),
           Expanded(
@@ -42,16 +46,20 @@ class _InputPageState extends State<InputPage> {
               children: [
                 Expanded(
                   child: ReusableCard(
-                    cardColor: blueBMIColors[1].toColor(),
+                    cardColor: cardColor,
                   ),
                 ),
                 Expanded(
                   child: ReusableCard(
-                    cardColor: blueBMIColors[1].toColor(),
+                    cardColor: cardColor,
                   ),
                 ),
               ],
             ),
+          ),
+          Container(
+            color: greenBMIColors[0].toColor(),
+            height: 80,
           ),
         ],
       ),

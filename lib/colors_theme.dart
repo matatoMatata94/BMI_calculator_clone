@@ -3,5 +3,10 @@ import 'package:flutter/cupertino.dart';
 //Malibu Blue
 final blueBMIColors = [
   HSLColor.fromAHSL(1, 205, 0.82, 0.68),
-  HSLColor.fromAHSL(1, 205, 0.5, 0.7),
+  HSLColor.fromAHSL(1, 205, 0.5, 0.6),
+];
+
+//Malachite Green
+final greenBMIColors = [
+  HSLColor.fromAHSL(1, 159, 0.43, 0.59),
 ];
