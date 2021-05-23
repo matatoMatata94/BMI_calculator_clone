@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 final blueBMIColors = [
   HSLColor.fromAHSL(1, 205, 0.82, 0.68),
   HSLColor.fromAHSL(1, 205, 0.5, 0.6),
+  HSLColor.fromAHSL(1, 205, 0.5, 0.8),
 ];
 
 //Malachite Green
