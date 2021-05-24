@@ -9,7 +9,10 @@ final kBottomBarHeight = 80;
 const double iconSize = 80;
 const double textSize = 18;
 
-final cardTextStyle = TextStyle(
+final kCardTextStyle = TextStyle(
   fontSize: textSize,
   color: greenBMIColors[1].toColor(),
 );
+
+const kCardNumberStyle =
+    TextStyle(color: Colors.white, fontSize: 50, fontWeight: FontWeight.bold);

@@ -1,6 +1,5 @@
+import 'package:bmi_calculator/constants.dart';
 import 'package:flutter/material.dart';
-
-import 'colors_theme.dart';
 
 class CardContent extends StatelessWidget {
   CardContent({this.cardIcon, this.cardText});
@@ -22,7 +21,7 @@ class CardContent extends StatelessWidget {
         ),
         Text(
           cardText,
-          style: cardTextStyle,
+          style: kCardTextStyle,
         ),
       ],
     );
