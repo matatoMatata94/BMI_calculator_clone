@@ -2,9 +2,6 @@ import 'package:flutter/material.dart';
 
 import 'colors_theme.dart';
 
-const double iconSize = 80;
-const double textSize = 18;
-
 class CardContent extends StatelessWidget {
   CardContent({this.cardIcon, this.cardText});
 
@@ -25,10 +22,7 @@ class CardContent extends StatelessWidget {
         ),
         Text(
           cardText,
-          style: TextStyle(
-            fontSize: textSize,
-            color: greenBMIColors[1].toColor(),
-          ),
+          style: cardTextStyle,
         ),
       ],
     );
