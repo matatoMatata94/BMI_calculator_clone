@@ -87,16 +87,26 @@ class _InputPageState extends State<InputPage> {
                       ),
                     ],
                   ),
-                  Slider(
-                    activeColor: kBottomBarColor,
-                    value: height,
-                    min: 1,
-                    max: 250,
-                    onChanged: (selectedHeight) {
-                      setState(() {
-                        height = selectedHeight;
-                      });
-                    },
+                  SliderTheme(
+                    data: SliderTheme.of(context).copyWith(
+                      activeTickMarkColor: Colors.white,
+                      thumbColor: kBottomBarColor,
+                      overlayColor: kBottomBarColor,
+                      thumbShape:
+                          RoundSliderThumbShape(enabledThumbRadius: 15.0),
+                      overlayShape: RoundSliderOverlayShape(overlayRadius: 30),
+                    ),
+                    child: Slider(
+                      activeColor: kBottomBarColor,
+                      value: height,
+                      min: 1,
+                      max: 250,
+                      onChanged: (selectedHeight) {
+                        setState(() {
+                          height = selectedHeight;
+                        });
+                      },
+                    ),
                   ),
                 ],
               ),
