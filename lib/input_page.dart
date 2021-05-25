@@ -14,6 +14,7 @@ class InputPage extends StatefulWidget {
 }
 
 class _InputPageState extends State<InputPage> {
+  double height = 180;
   Gender selectedGender;
 
   @override
@@ -77,7 +78,7 @@ class _InputPageState extends State<InputPage> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        '180',
+                        height.toStringAsFixed(0),
                         style: kCardNumberStyle,
                       ),
                       Text(
@@ -85,7 +86,18 @@ class _InputPageState extends State<InputPage> {
                         style: kCardTextStyle,
                       ),
                     ],
-                  )
+                  ),
+                  Slider(
+                    activeColor: kBottomBarColor,
+                    value: height,
+                    min: 1,
+                    max: 250,
+                    onChanged: (selectedHeight) {
+                      setState(() {
+                        height = selectedHeight;
+                      });
+                    },
+                  ),
                 ],
               ),
             ),
