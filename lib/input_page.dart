@@ -16,6 +16,8 @@ class InputPage extends StatefulWidget {
 class _InputPageState extends State<InputPage> {
   double height = 180;
   Gender selectedGender;
+  int weight = 50;
+  var age = 18;
 
   @override
   Widget build(BuildContext context) {
@@ -118,11 +120,57 @@ class _InputPageState extends State<InputPage> {
                 Expanded(
                   child: ReusableCard(
                     cardColor: kInactiveCardColor,
+                    cardChild: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text(
+                            'WEIGHT',
+                            style: kCardTextStyle,
+                          ),
+                        ),
+                        Text(
+                          weight.toString(),
+                          style: kCardNumberStyle,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            CircleIconButton(),
+                            CircleIconButton(),
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
                 ),
                 Expanded(
                   child: ReusableCard(
                     cardColor: kInactiveCardColor,
+                    cardChild: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text(
+                            'AGE',
+                            style: kCardTextStyle,
+                          ),
+                        ),
+                        Text(
+                          age.toString(),
+                          style: kCardNumberStyle,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            CircleIconButton(),
+                            CircleIconButton(),
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ],
@@ -134,6 +182,16 @@ class _InputPageState extends State<InputPage> {
           ),
         ],
       ),
+    );
+  }
+}
+
+class CircleIconButton extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return RawMaterialButton(
+      shape: CircleBorder(),
+      fillColor: kBottomBarColor,
     );
   }
 }
