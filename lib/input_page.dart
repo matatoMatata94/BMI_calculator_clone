@@ -137,8 +137,9 @@ class _InputPageState extends State<InputPage> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            CircleIconButton(),
-                            CircleIconButton(),
+                            CircleIconButton(icon: FontAwesomeIcons.plus),
+                            SizedBox(width: 10),
+                            CircleIconButton(icon: FontAwesomeIcons.minus),
                           ],
                         ),
                       ],
@@ -165,8 +166,9 @@ class _InputPageState extends State<InputPage> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            CircleIconButton(),
-                            CircleIconButton(),
+                            CircleIconButton(icon: FontAwesomeIcons.plus),
+                            SizedBox(width: 10),
+                            CircleIconButton(icon: FontAwesomeIcons.minus),
                           ],
                         ),
                       ],
@@ -187,9 +189,19 @@ class _InputPageState extends State<InputPage> {
 }
 
 class CircleIconButton extends StatelessWidget {
+  CircleIconButton({this.icon});
+  final IconData icon;
+
   @override
   Widget build(BuildContext context) {
     return RawMaterialButton(
+      elevation: 0.0,
+      child: Icon(icon),
+      onPressed: () {},
+      constraints: BoxConstraints.tightFor(
+        width: 50.0,
+        height: 50.0,
+      ),
       shape: CircleBorder(),
       fillColor: kBottomBarColor,
     );
