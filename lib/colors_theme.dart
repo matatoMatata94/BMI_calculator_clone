@@ -9,6 +9,6 @@ final blueBMIColors = [
 
 //Malachite Green
 final greenBMIColors = [
-  HSLColor.fromAHSL(1, 159, 0.43, 0.59),
-  HSLColor.fromAHSL(1, 159, 0.43, 0.7),
+  HSLColor.fromAHSL(1, 160, 0.43, 0.59),
+  HSLColor.fromAHSL(1, 160, 0.43, 0.7),
 ];
