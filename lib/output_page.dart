@@ -7,7 +7,11 @@ class OutputPage extends StatelessWidget {
       appBar: AppBar(
         title: Text('BMI Calculator'),
       ),
-      body: Container(),
+      body: Container(
+        child: Center(
+          child: Text('Output Page'),
+        ),
+      ),
     );
   }
 }

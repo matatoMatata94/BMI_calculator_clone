@@ -1,13 +1,13 @@
 import 'package:bmi_calculator/cirle_icon_button.dart';
 import 'package:bmi_calculator/constants.dart';
 import 'package:bmi_calculator/gender.dart';
+import 'package:bmi_calculator/rectangle_button.dart';
 import 'package:bmi_calculator/reusable_card.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'card_content.dart';
-import 'colors_theme.dart';
 
 class InputPage extends StatefulWidget {
   @override
@@ -207,9 +207,10 @@ class _InputPageState extends State<InputPage> {
               ],
             ),
           ),
-          Container(
-            color: greenBMIColors[0].toColor(),
-            height: 80,
+          RectangleButton(
+            onPressed: () {
+              Navigator.pushNamed(context, '/output');
+            },
           ),
         ],
       ),
