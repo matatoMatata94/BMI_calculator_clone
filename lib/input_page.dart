@@ -24,7 +24,7 @@ class _InputPageState extends State<InputPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('BMI Calculator'),
+        title: Text('BMI CALCULATOR'),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -211,6 +211,7 @@ class _InputPageState extends State<InputPage> {
             onPressed: () {
               Navigator.pushNamed(context, '/output');
             },
+            child: Text('Calculate'),
           ),
         ],
       ),
