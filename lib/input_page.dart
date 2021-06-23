@@ -211,7 +211,10 @@ class _InputPageState extends State<InputPage> {
             onPressed: () {
               Navigator.pushNamed(context, '/output');
             },
-            child: Text('Calculate'),
+            child: Text(
+              'Calculate',
+              style: kCardLetterStyle,
+            ),
           ),
         ],
       ),

@@ -16,3 +16,6 @@ final kCardTextStyle = TextStyle(
 
 const kCardNumberStyle =
     TextStyle(color: Colors.white, fontSize: 50, fontWeight: FontWeight.bold);
+
+const kCardLetterStyle =
+    TextStyle(color: Colors.white, fontSize: 45, fontWeight: FontWeight.bold);
