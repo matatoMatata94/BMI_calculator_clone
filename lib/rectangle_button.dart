@@ -10,7 +10,7 @@ class RectangleButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return RawMaterialButton(
       child: child,
-      elevation: 6.0,
+      elevation: 7.0,
       onPressed: onPressed,
       constraints: BoxConstraints.tightFor(
         width: 50.0,
