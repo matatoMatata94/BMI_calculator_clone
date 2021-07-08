@@ -5,6 +5,11 @@ final kActiveCardColor = blueBMIColors[2].toColor();
 final kBottomBarColor = greenBMIColors[0].toColor();
 final kBottomBarHeight = 80;
 
+enum Gender {
+  male,
+  female,
+}
+
 const double iconSize = 80;
 const double textSize = 18;
 

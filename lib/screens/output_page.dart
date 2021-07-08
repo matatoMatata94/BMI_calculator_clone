@@ -1,6 +1,6 @@
+import 'package:bmi_calculator/components/rectangle_button.dart';
+import 'package:bmi_calculator/components/reusable_card.dart';
 import 'package:bmi_calculator/constants.dart';
-import 'package:bmi_calculator/rectangle_button.dart';
-import 'package:bmi_calculator/reusable_card.dart';
 import 'package:flutter/material.dart';
 
 class OutputPage extends StatelessWidget {
@@ -23,7 +23,7 @@ class OutputPage extends StatelessWidget {
             ),
           ),
           Expanded(
-            flex: 5,
+            flex: 10,
             child: Container(
               child: ReusableCard(
                 cardColor: kInactiveCardColor,
@@ -50,7 +50,7 @@ class OutputPage extends StatelessWidget {
                 Navigator.pop(context);
               },
               child: Text(
-                'Calculate',
+                'Re-Calculate',
                 style: kCardLetterStyle,
               ),
             ),
