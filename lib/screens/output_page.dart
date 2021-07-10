@@ -4,6 +4,15 @@ import 'package:bmi_calculator/constants.dart';
 import 'package:flutter/material.dart';
 
 class OutputPage extends StatelessWidget {
+  OutputPage(
+      {@required this.bmiResult,
+      @required this.interpretation,
+      @required this.resultText});
+
+  final String bmiResult;
+  final String resultText;
+  final String interpretation;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,6 +25,7 @@ class OutputPage extends StatelessWidget {
         children: [
           Expanded(
             child: Container(
+              padding: EdgeInsets.all(2.0),
               child: Text(
                 'YOUR RESULTS',
                 style: kTitleTextStyle,
@@ -32,12 +42,16 @@ class OutputPage extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Text(
-                      'Result',
+                      resultText,
                       style: kResultTextStyle,
                     ),
                     Text(
-                      '18.3',
+                      bmiResult,
                       style: kBMITextStyle,
+                    ),
+                    Text(
+                      interpretation,
+                      style: kResultTextStyle,
                     ),
                   ],
                 ),

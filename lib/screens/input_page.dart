@@ -1,7 +1,9 @@
+import 'package:bmi_calculator/calculator_brain.dart';
 import 'package:bmi_calculator/components/cirle_icon_button.dart';
 import 'package:bmi_calculator/components/rectangle_button.dart';
 import 'package:bmi_calculator/components/reusable_card.dart';
 import 'package:bmi_calculator/constants.dart';
+import 'package:bmi_calculator/screens/output_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -208,7 +210,18 @@ class _InputPageState extends State<InputPage> {
           ),
           RectangleButton(
             onPressed: () {
-              Navigator.pushNamed(context, '/output');
+              CalculatorBrain calc =
+                  CalculatorBrain(height: height, weight: weight);
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => OutputPage(
+                    bmiResult: calc.calculateBMI(),
+                    resultText: calc.getResult(),
+                    interpretation: calc.getInterpretation(),
+                  ),
+                ),
+              );
             },
             child: Text(
               'Calculate',
